@@ -8,8 +8,11 @@ import org.junit.Test;
 
 public class BMIKalkulatorTest {
 
+	private BMIKalkulator kalkulator;
+	
 	@Before
 	public void setUp() throws Exception {
+		kalkulator = new BMIKalkulator();
 	}
 
 	@After
@@ -18,7 +21,7 @@ public class BMIKalkulatorTest {
 
 	@Test
 	public void metoda_izracunajBMI() {
-		double actual = BMIKalkulator.izracunajBMI(4, 4);
+		double actual = kalkulator.izracunajBMI(4, 4);
 		assertEquals("BMI nije dobro izracunat", 0.25, actual, 0.0001);
 	}
 

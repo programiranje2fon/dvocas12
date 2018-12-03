@@ -9,7 +9,6 @@ public class PokreniTestove {
 	public static void main(String[] args) {
 
 		pokreniTestoveZaKlasu(zadatak1.poslovna_logika.KonvertorTest.class);
-		pokreniTestoveZaKlasu(zadatak1.gui.KonvertorGUITest.class);
 		pokreniTestoveZaKlasu(zadatak2.poslovna_logika.BMIKalkulatorTest.class);		
 	}
 

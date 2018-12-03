@@ -18,6 +18,7 @@ public class BMIKalkulatorGUI {
 	private JTextField visinaField;
 	private JTextField tezinaField;
 	private JTextField bmiField;
+	private BMIKalkulator bmiKalkulator = new BMIKalkulator();
 
 	/**
 	 * Launch the application.
@@ -75,7 +76,7 @@ public class BMIKalkulatorGUI {
 			public void actionPerformed(ActionEvent e) {
 				double visina = Double.parseDouble(visinaField.getText());
 				double tezina = Double.parseDouble(tezinaField.getText());
-				double bmi = BMIKalkulator.izracunajBMI(visina, tezina);
+				double bmi = bmiKalkulator.izracunajBMI(visina, tezina);
 				bmiField.setText(""+bmi);				
 			}
 		});

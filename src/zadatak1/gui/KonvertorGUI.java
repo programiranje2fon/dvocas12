@@ -17,6 +17,8 @@ public class KonvertorGUI {
 	private JFrame frmKonverrorValuta;
 	private JTextField dinField;
 	private JTextField eurField;
+	
+	private Konvertor konvertor = new Konvertor();
 
 	/**
 	 * Launch the application.
@@ -73,7 +75,7 @@ public class KonvertorGUI {
 		btnKonvertujDUE.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				double dinari = Double.parseDouble(dinField.getText());
-				double evri = Konvertor.konvertujDUE(dinari);
+				double evri = konvertor.konvertujDUE(dinari);
 				eurField.setText(""+evri);				
 			}
 		});
@@ -84,7 +86,7 @@ public class KonvertorGUI {
 		btnKonvertujEUD.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				double evri = Double.parseDouble(eurField.getText());
-				double dinari = Konvertor.konvertujEUD(evri);
+				double dinari = konvertor.konvertujEUD(evri);
 				dinField.setText(""+dinari);
 				
 			}
