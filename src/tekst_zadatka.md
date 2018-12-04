@@ -20,6 +20,8 @@ Napraviti klasu **KonvertorGUI** u paketu **zadatak1.gui** koja izgleda kao na s
 
 3. Na pritisak dugmeta **Konvertuj EUD** iznos u evrima koji je upisan u desno polje za unos konvertuje u dinare i prikaže u levom polju za unos.
 
+![Konvertor Gui](konvertor-gui.png)
+
 
 ##Zadatak 2
 *(studenti rade sami)*
@@ -34,3 +36,5 @@ BMI tj. Body Mass Index po formuli BMI = težina (kg)/[visina(m)]2
 interfejs prikazan na sledećoj slici. Potrebno je obezbediti da nakon što korisnik unese podatke o
 visini i težini u odgovarajuća polja i klikne na dugme ‘Izracunaj BMI’ u polju BMI se ispisuje
 izračunata vrednost BMI (Body Mass Index)-a. BMI izračunati koristeći metodu **izracunajBMI** klase **BMIKalkulator** 
+
+![BMI Gui](bmi-gui.png)
