@@ -1,26 +1,24 @@
 package zadatak1.gui;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
 import zadatak1.poslovna_logika.Konvertor;
 
-import javax.swing.JLabel;
-import javax.swing.JTextField;
-import javax.swing.JButton;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-import javax.swing.JMenuBar;
-import javax.swing.JMenu;
-
 public class KonvertorGUI extends JFrame {
 
-	private Konvertor konvertor = new Konvertor();	
-	
+	private static final long serialVersionUID = 1L;
+
+	private Konvertor konvertor = new Konvertor();
+
 	private JPanel contentPane;
 	private JLabel lblIznosUDinarima;
 	private JLabel lblIznosUEvrima;
@@ -28,10 +26,6 @@ public class KonvertorGUI extends JFrame {
 	private JTextField evriField;
 	private JButton btnKonvertujDue;
 	private JButton btnKonvertujEud;
-	private JMenuBar menuBar;
-	private JMenu mnFile;
-	private JMenu mnEdit;
-	private JMenu mnHelp;
 
 	/**
 	 * Launch the application.
@@ -57,7 +51,6 @@ public class KonvertorGUI extends JFrame {
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
-		setJMenuBar(getMenuBar_1());
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -77,6 +70,7 @@ public class KonvertorGUI extends JFrame {
 		}
 		return lblIznosUDinarima;
 	}
+
 	private JLabel getLblIznosUEvrima() {
 		if (lblIznosUEvrima == null) {
 			lblIznosUEvrima = new JLabel("Iznos u evrima");
@@ -84,6 +78,7 @@ public class KonvertorGUI extends JFrame {
 		}
 		return lblIznosUEvrima;
 	}
+
 	private JTextField getDinariField() {
 		if (dinariField == null) {
 			dinariField = new JTextField();
@@ -92,6 +87,7 @@ public class KonvertorGUI extends JFrame {
 		}
 		return dinariField;
 	}
+
 	private JTextField getEvriField() {
 		if (evriField == null) {
 			evriField = new JTextField();
@@ -100,6 +96,7 @@ public class KonvertorGUI extends JFrame {
 		}
 		return evriField;
 	}
+
 	private JButton getBtnKonvertujDue() {
 		if (btnKonvertujDue == null) {
 			btnKonvertujDue = new JButton("Konvertuj DUE");
@@ -107,13 +104,14 @@ public class KonvertorGUI extends JFrame {
 				public void actionPerformed(ActionEvent e) {
 					double dinari = Double.parseDouble(dinariField.getText());
 					double evri = konvertor.konvertujDUE(dinari);
-					evriField.setText(""+evri);	
+					evriField.setText("" + evri);
 				}
 			});
 			btnKonvertujDue.setBounds(66, 159, 103, 23);
 		}
 		return btnKonvertujDue;
 	}
+
 	private JButton getBtnKonvertujEud() {
 		if (btnKonvertujEud == null) {
 			btnKonvertujEud = new JButton("Konvertuj EUD");
@@ -121,38 +119,11 @@ public class KonvertorGUI extends JFrame {
 				public void actionPerformed(ActionEvent e) {
 					double evri = Double.parseDouble(evriField.getText());
 					double dinari = konvertor.konvertujEUD(evri);
-					dinariField.setText(""+dinari);
+					dinariField.setText("" + dinari);
 				}
 			});
 			btnKonvertujEud.setBounds(217, 159, 113, 23);
 		}
 		return btnKonvertujEud;
-	}
-	private JMenuBar getMenuBar_1() {
-		if (menuBar == null) {
-			menuBar = new JMenuBar();
-			menuBar.add(getMnFile());
-			menuBar.add(getMnEdit());
-			menuBar.add(getMnHelp());
-		}
-		return menuBar;
-	}
-	private JMenu getMnFile() {
-		if (mnFile == null) {
-			mnFile = new JMenu("File");
-		}
-		return mnFile;
-	}
-	private JMenu getMnEdit() {
-		if (mnEdit == null) {
-			mnEdit = new JMenu("Edit");
-		}
-		return mnEdit;
-	}
-	private JMenu getMnHelp() {
-		if (mnHelp == null) {
-			mnHelp = new JMenu("Help");
-		}
-		return mnHelp;
 	}
 }

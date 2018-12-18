@@ -1,23 +1,24 @@
 package zadatak2.gui;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
 import zadatak2.poslovna_logika.BMIKalkulator;
-import java.awt.FlowLayout;
-import javax.swing.JLabel;
-import javax.swing.JTextField;
-import javax.swing.JButton;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 
 public class BMIKalkulatorGUI extends JFrame {
 
+	private static final long serialVersionUID = 1L;
+
 	private BMIKalkulator bmiKalkulator = new BMIKalkulator();
+	
 	private JPanel contentPane;
 	private JLabel lblVisina;
 	private JLabel lblTezina;
@@ -50,7 +51,7 @@ public class BMIKalkulatorGUI extends JFrame {
 		setTitle("BMI Kalkulator");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 362, 342);
+		setBounds(100, 100, 296, 279);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -67,33 +68,37 @@ public class BMIKalkulatorGUI extends JFrame {
 	private JLabel getLblVisina() {
 		if (lblVisina == null) {
 			lblVisina = new JLabel("Visina:");
-			lblVisina.setBounds(92, 40, 46, 14);
+			lblVisina.setBounds(35, 40, 46, 14);
 		}
 		return lblVisina;
 	}
+
 	private JLabel getLblTezina() {
 		if (lblTezina == null) {
 			lblTezina = new JLabel("Tezina:");
-			lblTezina.setBounds(92, 90, 46, 14);
+			lblTezina.setBounds(35, 90, 46, 14);
 		}
 		return lblTezina;
 	}
+
 	private JTextField getVisinaField() {
 		if (visinaField == null) {
 			visinaField = new JTextField();
-			visinaField.setBounds(164, 37, 86, 20);
+			visinaField.setBounds(123, 37, 136, 20);
 			visinaField.setColumns(10);
 		}
 		return visinaField;
 	}
+
 	private JTextField getTezinaField() {
 		if (tezinaField == null) {
 			tezinaField = new JTextField();
-			tezinaField.setBounds(164, 87, 86, 20);
+			tezinaField.setBounds(123, 87, 136, 20);
 			tezinaField.setColumns(10);
 		}
 		return tezinaField;
 	}
+
 	private JButton getBtnIzracunajBmi() {
 		if (btnIzracunajBmi == null) {
 			btnIzracunajBmi = new JButton("Izracunaj BMI");
@@ -102,24 +107,26 @@ public class BMIKalkulatorGUI extends JFrame {
 					double visina = Double.parseDouble(visinaField.getText());
 					double tezina = Double.parseDouble(tezinaField.getText());
 					double bmi = bmiKalkulator.izracunajBMI(visina, tezina);
-					bmiField.setText(""+bmi);						
+					bmiField.setText("" + bmi);
 				}
 			});
-			btnIzracunajBmi.setBounds(119, 161, 101, 23);
+			btnIzracunajBmi.setBounds(35, 142, 131, 23);
 		}
 		return btnIzracunajBmi;
 	}
+
 	private JLabel getLblBmi() {
 		if (lblBmi == null) {
 			lblBmi = new JLabel("BMI:");
-			lblBmi.setBounds(92, 240, 61, 14);
+			lblBmi.setBounds(35, 205, 61, 14);
 		}
 		return lblBmi;
 	}
+
 	private JTextField getBmiField() {
 		if (bmiField == null) {
 			bmiField = new JTextField();
-			bmiField.setBounds(163, 237, 86, 20);
+			bmiField.setBounds(123, 202, 136, 20);
 			bmiField.setColumns(10);
 		}
 		return bmiField;
