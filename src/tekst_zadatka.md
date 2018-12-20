@@ -19,7 +19,7 @@ Napraviti klasu **KonvertorGUI** u paketu **zadatak1.gui** koja izgleda kao na s
 
 - Na pritisak dugmeta **Konvertuj EUD** iznos u evrima koji je upisan u desno polje za unos konvertuje u dinare i prikaže u levom polju za unos.
 
-![Konvertor Gui](../images/konvertor-gui.png)
+![Konvertor Gui](../images/konvertor-gui.jpg)
 
 
 ##Zadatak 2
@@ -35,4 +35,4 @@ Napisati javnu klasu **BMIKalkulatorGUI** u paketu **zadatak2.gui** kojom se kre
 
 - Nakon što korisnik unese podatke o visini i težini u odgovarajuća polja i klikne na dugme "Izracunaj BMI", u polju BMI se ispisuje izračunata vrednost BMI (Body Mass Index)-a. BMI izračunati koristeći metodu **izracunajBMI** klase **BMIKalkulator**.
 
-![BMI Gui](../images/bmi-gui.png)
+![BMI Gui](../images/bmi-gui.jpg)
