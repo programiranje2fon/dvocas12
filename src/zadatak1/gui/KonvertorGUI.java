@@ -50,7 +50,7 @@ public class KonvertorGUI extends JFrame {
 		setTitle("Konvertor valuta");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 423, 220);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -65,16 +65,16 @@ public class KonvertorGUI extends JFrame {
 
 	private JLabel getLblIznosUDinarima() {
 		if (lblIznosUDinarima == null) {
-			lblIznosUDinarima = new JLabel("Iznos u dinarima");
-			lblIznosUDinarima.setBounds(66, 82, 78, 14);
+			lblIznosUDinarima = new JLabel("Iznos u dinarima:");
+			lblIznosUDinarima.setBounds(41, 47, 144, 14);
 		}
 		return lblIznosUDinarima;
 	}
 
 	private JLabel getLblIznosUEvrima() {
 		if (lblIznosUEvrima == null) {
-			lblIznosUEvrima = new JLabel("Iznos u evrima");
-			lblIznosUEvrima.setBounds(217, 82, 91, 14);
+			lblIznosUEvrima = new JLabel("Iznos u evrima:");
+			lblIznosUEvrima.setBounds(232, 47, 144, 14);
 		}
 		return lblIznosUEvrima;
 	}
@@ -82,7 +82,7 @@ public class KonvertorGUI extends JFrame {
 	private JTextField getDinariField() {
 		if (dinariField == null) {
 			dinariField = new JTextField();
-			dinariField.setBounds(66, 109, 103, 20);
+			dinariField.setBounds(41, 79, 144, 20);
 			dinariField.setColumns(10);
 		}
 		return dinariField;
@@ -91,7 +91,7 @@ public class KonvertorGUI extends JFrame {
 	private JTextField getEvriField() {
 		if (evriField == null) {
 			evriField = new JTextField();
-			evriField.setBounds(217, 109, 113, 20);
+			evriField.setBounds(232, 79, 144, 20);
 			evriField.setColumns(10);
 		}
 		return evriField;
@@ -107,7 +107,7 @@ public class KonvertorGUI extends JFrame {
 					evriField.setText("" + evri);
 				}
 			});
-			btnKonvertujDue.setBounds(66, 159, 103, 23);
+			btnKonvertujDue.setBounds(41, 127, 144, 23);
 		}
 		return btnKonvertujDue;
 	}
@@ -122,7 +122,7 @@ public class KonvertorGUI extends JFrame {
 					dinariField.setText("" + dinari);
 				}
 			});
-			btnKonvertujEud.setBounds(217, 159, 113, 23);
+			btnKonvertujEud.setBounds(232, 127, 144, 23);
 		}
 		return btnKonvertujEud;
 	}
