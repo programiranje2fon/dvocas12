@@ -100,13 +100,6 @@ public class KonvertorGUI extends JFrame {
 	private JButton getBtnKonvertujDue() {
 		if (btnKonvertujDue == null) {
 			btnKonvertujDue = new JButton("Konvertuj DUE");
-			btnKonvertujDue.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent e) {
-					double dinari = Double.parseDouble(dinariField.getText());
-					double evri = konvertor.konvertujDUE(dinari);
-					evriField.setText("" + evri);
-				}
-			});
 			btnKonvertujDue.setBounds(41, 127, 144, 23);
 		}
 		return btnKonvertujDue;
@@ -115,13 +108,6 @@ public class KonvertorGUI extends JFrame {
 	private JButton getBtnKonvertujEud() {
 		if (btnKonvertujEud == null) {
 			btnKonvertujEud = new JButton("Konvertuj EUD");
-			btnKonvertujEud.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent e) {
-					double evri = Double.parseDouble(evriField.getText());
-					double dinari = konvertor.konvertujEUD(evri);
-					dinariField.setText("" + dinari);
-				}
-			});
 			btnKonvertujEud.setBounds(232, 127, 144, 23);
 		}
 		return btnKonvertujEud;
