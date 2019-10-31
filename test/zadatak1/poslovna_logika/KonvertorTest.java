@@ -20,14 +20,14 @@ public class KonvertorTest {
 	}
 
 	@Test
-	public void metoda_konvertujDUE() {
-		double actual = konvertor.konvertujDUE(240);
+	public void metoda_konvertujDinareUEvre() {
+		double actual = konvertor.konvertujDinareUEvre(240);
 		assertEquals("Konvertovanje dinara u evre se ne izracunava dobro", 2, actual, 0.01);
 	}
 
 	@Test
-	public void testKonvertujEUD() {
-		double actual = konvertor.konvertujEUD(10);
+	public void metoda_konvertujEvreUDinare() {
+		double actual = konvertor.konvertujEvreUDinare(10);
 		assertEquals("Konvertovanje evra u dinare se ne izracunava dobro", 1200, actual, 0.01);
 	}
 
