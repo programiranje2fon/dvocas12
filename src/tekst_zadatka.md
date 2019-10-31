@@ -7,17 +7,17 @@ Za kreiranje GUI-ja namestiti opciju Window Builder-a na lazy code generation u 
 
 Napraviti javnu klasu **Konvertor** u paketu **zadatak1.poslovna_logika** koja ima:
 
-- Javnu metodu **konvertujDUE** koja kao ulazni argument dobija iznos u dinarima (realan broj). Ova metoda konvertuje ovaj iznos u evre i vraća ga (1EUR = 120DIN).
+- Javnu metodu **konvertujDinareUEvre** koja kao ulazni argument dobija iznos u dinarima (realan broj). Ova metoda konvertuje ovaj iznos u evre i vraća ga (1EUR = 120DIN).
 
-- Javnu metodu **konvertujEUD** koja kao ulazni argument dobija iznos u evrima (realan broj). Ova metoda konvertuje ovaj iznos u dinare i vraća ga (1EUR = 120DIN).
+- Javnu metodu **konvertujEvreUDinare** koja kao ulazni argument dobija iznos u evrima (realan broj). Ova metoda konvertuje ovaj iznos u dinare i vraća ga (1EUR = 120DIN).
 
 Napraviti klasu **KonvertorGUI** u paketu **zadatak1.gui** koja izgleda kao na slici. Podesiti da dimenzije prozora ne mogu da se menjaju. Klasa treba da:
 
 - Ima privatni atribut **konvertor** tipa **Konvertor** .
 
-- Na pritisak dugmeta **Konvertuj DUE** dinarski iznos koji je upisan u levo polje za unos konvertuje u evre i prikaže u desnom polju za unos. 
+- Na pritisak dugmeta **Dinari u evre** dinarski iznos koji je upisan u levo polje za unos konvertuje u evre i prikaže u desnom polju za unos. 
 
-- Na pritisak dugmeta **Konvertuj EUD** iznos u evrima koji je upisan u desno polje za unos konvertuje u dinare i prikaže u levom polju za unos.
+- Na pritisak dugmeta **Evri u dinare** iznos u evrima koji je upisan u desno polje za unos konvertuje u dinare i prikaže u levom polju za unos.
 
 ![Konvertor Gui](../images/konvertor-gui.jpg)
 
