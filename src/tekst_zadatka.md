@@ -27,7 +27,7 @@ Napraviti klasu **KonvertorGUI** u paketu **zadatak1.gui** koja izgleda kao na s
 
 Napisati javnu klasu **BMIKalkulator** u paketu **zadatak2.poslovna_logika** koja ima:
 
-1. Javnu metodu **izracunajBMI** koja kao ulazni argument dobija visinu i težinu čoveka (realni brojevi). Visina je data u metrima a težina u kilogramima. Metoda izračunava i vraća BMI tj. Body Mass Index po formuli BMI = težina (kg)/[visina(m)]2.
+1. Javnu metodu **izracunajBMI** koja kao ulazni argument dobija visinu i težinu čoveka (realni brojevi). Visina je data u metrima a težina u kilogramima. Metoda izračunava i vraća BMI tj. Body Mass Index po formuli BMI = težina/visina<sup>2</sup>.
 
 Napisati javnu klasu **BMIKalkulatorGUI** u paketu **zadatak2.gui** kojom se kreira korisnički interfejs prikazan na sledećoj slici. Podesiti da dimenzija prozora  ne može da se menja. Klasa treba da:
  
