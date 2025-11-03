@@ -1,7 +1,5 @@
 # Laboratorijske vežbe – dvočas br. 12
 
-Za kreiranje GUI-ja namestiti opciju Window Builder-a na lazy code generation u Window > Preferences > WindowBuilder > Swing > Code Generation > Lazy
-
 ##Zadatak 1
 *(radi laborant u saradnji sa studentima)*
 
@@ -19,7 +17,7 @@ Napraviti klasu **KonvertorGUI** u paketu **zadatak1.gui** koja izgleda kao na s
 
 - Na pritisak dugmeta **Evri u dinare** iznos u evrima koji je upisan u desno polje za unos konvertuje u dinare i prikaže u levom polju za unos.
 
-![Konvertor Gui](../images/konvertor-gui.jpg)
+![Konvertor Gui](../images/KonvertorGUI.png)
 
 
 ##Zadatak 2
@@ -35,4 +33,4 @@ Napisati javnu klasu **BMIKalkulatorGUI** u paketu **zadatak2.gui** kojom se kre
 
 - Nakon što korisnik unese podatke o visini i težini u odgovarajuća polja i klikne na dugme "Izracunaj BMI", u polju BMI se ispisuje izračunata vrednost BMI (Body Mass Index)-a. BMI izračunati koristeći metodu **izracunajBMI** klase **BMIKalkulator**.
 
-![BMI Gui](../images/bmi-gui.jpg)
+![BMI Gui](../images/BMIKalkulatorGUI.png)
