@@ -1,6 +1,6 @@
 # Laboratorijske vežbe – dvočas br. 12
 
-##Zadatak 1
+## Zadatak 1
 *(radi laborant u saradnji sa studentima)*
 
 Napraviti javnu klasu **Konvertor** u paketu **zadatak1.poslovna_logika** koja ima:
@@ -20,7 +20,7 @@ Napraviti klasu **KonvertorGUI** u paketu **zadatak1.gui** koja izgleda kao na s
 ![Konvertor Gui](../images/KonvertorGUI.png)
 
 
-##Zadatak 2
+## Zadatak 2
 *(studenti rade sami)*
 
 Napisati javnu klasu **BMIKalkulator** u paketu **zadatak2.poslovna_logika** koja ima:
