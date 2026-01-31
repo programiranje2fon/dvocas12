@@ -10,7 +10,6 @@ import java.awt.event.ActionListener;
 // bi predstavljala pravi prozor na koji moze da
 // se postavi panel koji se pravi u Swing UI grafickom editoru
 public class KonvertorGUI extends JFrame {
-
     //Svaka od komponenti sa panela, a i sam panel
     //ce se ovde naci kao privatni atributi
     private JTextField poljeDinari;
@@ -18,6 +17,8 @@ public class KonvertorGUI extends JFrame {
     private JButton konvertujDUEButton;
     private JButton konvertujEUDButton;
     private JPanel mojPanel;
+
+    private Konvertor konvertor = new Konvertor();
 
     //Konstruktor u kojem postavljamo osnovne parametre
     //samog prozora: dodavanje panela, naslov prozora,
@@ -49,14 +50,12 @@ public class KonvertorGUI extends JFrame {
         konvertujDUEButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Konvertor k = new Konvertor();
-
                 //Preuzimanje dinara iz polja za unos dinara
                 // i pretvaranje iz String u double
                 double dinari = Double.parseDouble(poljeDinari.getText());
 
                 //Konverzija dinara u evre
-                double evri = k.konvertujDinareUEvre(dinari);
+                double evri = konvertor.konvertujDinareUEvre(dinari);
 
                 //Postavljanje vrednosti u evrima u polje za evre
                 poljeEvri.setText(evri + "");
@@ -65,14 +64,12 @@ public class KonvertorGUI extends JFrame {
         konvertujEUDButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Konvertor k = new Konvertor();
-
                 //Preuzimanje iznosa u evrima iz polja za unos
                 // i pretvaranje iz String u double
                 double evri = Double.parseDouble(poljeEvri.getText());
 
                 //Konverzija iz evra u dinare
-                double dinari = k.konvertujEvreUDinare(evri);
+                double dinari = konvertor.konvertujEvreUDinare(evri);
 
                 //Postavljanje vrednosti u dinarima u polje za dinare
                 poljeDinari.setText(dinari + "");
